@@ -23,7 +23,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8 # 👈 required to avoid the "No pnpm version is specified" error
+          version: 10.8.0 # 👈 required to avoid the "No pnpm version is specified" error
 
       - name: Install dependencies
         run: pnpm install
