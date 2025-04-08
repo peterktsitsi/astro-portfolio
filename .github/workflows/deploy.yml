@@ -13,6 +13,9 @@ permissions:
   contents: read
   pages: write
   id-token: write
+#pnpm stuff
+
+
 
 jobs:
   build:
@@ -20,6 +23,10 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         # with:
@@ -37,3 +44,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+        
